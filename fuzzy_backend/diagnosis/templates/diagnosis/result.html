@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagnosis Result</title>
+    <link rel="stylesheet" href="{% static 'diagnosis/style.css' %}">
+</head>
+<body>
+    <div class="container">
+    <h1>Diagnosis Result</h1>
+    <p><strong>Depression:</strong> {{ output.depression|floatformat:2 }} % </p>
+    <p><strong>Anxiety:</strong> {{ output.anxiety|floatformat:2 }} % </p>
+    <p><strong>Isolation:</strong> {{ output.isolation|floatformat:2 }} % </p>
+    <p><strong>Future Insecurity:</strong> {{ output.future_insecurity|floatformat:2 }} % </p>
+    <a href="{% url 'index' %}">Try Again</a>
+    </div>
+</body>
+</html>

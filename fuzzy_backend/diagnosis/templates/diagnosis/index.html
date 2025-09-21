@@ -1,0 +1,26 @@
+
+    <!-- diagnosis/templates/diagnosis/index.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fuzzy Diagnosis</title>
+    <link rel="stylesheet" href="{% static 'diagnosis/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Fuzzy Expert System</h1>
+        <p>Submit your data to get predictions on mental health indicators.</p>
+            <form method="post" action="{% url 'result' %}">
+        {% csrf_token %}
+        <label>Academic Workload:</label><input type="number" name="academic_workload" step="0.1" min="0" max="5" required><br>
+        <label>Social Relationships:</label><input type="number" name="social_relationships" step="0.1" min="0" max="5" required><br>
+        <label>Average Sleep:</label><input type="number" name="average_sleep" step="0.1" min="1" max="10" required><br>
+        <label>Financial Concerns:</label><input type="number" name="financial_concerns" step="0.1" min="0" max="5" required><br>
+        <label>Academic Pressure:</label><input type="number" name="academic_pressure" step="0.1" min="0" max="5" required><br>
+        <label>Age:</label><input type="number" name="age"min="17" max="30" required><br>
+        <button type="submit">Diagnose</button>
+    </form>
+    </div>
+</body>
+</html>
