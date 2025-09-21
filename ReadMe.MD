@@ -150,10 +150,3 @@ This project is for academic and research purposes only.
 ## 🙏 Thanks
 
 If you found this useful or want to contribute, feel free to fork and star ⭐ the repo.
-
-```
-
----
-
-Would you like me to also prepare the `requirements.txt` or a `.gitignore` file?
-```
